@@ -23,6 +23,7 @@ ___
 ```
 npm install
 ```
+A free version of **MDB UI Kit** is already included as a dependency, to upgrade it to PRO version install the package you own with the command below.
 
 > **Pro Essential installation**
 > ```
