@@ -35,6 +35,7 @@
             href="https://mdbootstrap.com/docs/standard/getting-started/"
             target="_blank"
             role="button"
+            data-mdb-ripple-init
             >Start MDB tutorial</a
           >
         </div>
@@ -45,6 +46,10 @@
     <!-- MDB -->
     <script src="./main.js"></script>
     <!-- Custom scripts -->
-    <script type="module"></script>
+    <script type="module">
+      const { Ripple, initMDB } = mdb;
+
+      initMDB({Ripple});
+    </script>
   </body>
 </html>

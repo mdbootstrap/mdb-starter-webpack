@@ -72,11 +72,19 @@ ___
 # MDB UI KIT - Importing of MDB files
 
 ### Importing JS modules
-You can import the entire library or just individual modules:
+You can import the entire library or just individual modules. The default import method is ES module import.
+his type of import requires using the **initMDB** method for all components that rely on the auto initiation used on the page.
 ```
-import * as mdb from 'mdb-ui-kit'; // lib
-import { Input } from 'mdb-ui-kit'; // module
-import { Input as CustomInput } from 'mdb-ui-kit'; // module with custom name
+import { Ripple, initMDB } from 'mdb-ui-kit/js/mdb.es.min.js'; // Import needed modules
+window.Ripple = Ripple;
+initMDB({ Ripple }) // Initialize imported modules to enable data-attribute init
+```
+
+Alternatively, you can import using UMD format. MDB in UMD format will work without adding more elements, but will lack treeshaking.
+```
+import * as mdb from 'mdb-ui-kit/js/mdb.umd.min.js'; // lib
+import { Input } from 'mdb-ui-kit/js/mdb.umd.min.js'; // module
+import { Input as CustomInput } from 'mdb-ui-kit/js/mdb.umd.min.js'; // module with custom name
 ```
 
 ### Importing CSS file
